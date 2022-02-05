@@ -3,7 +3,7 @@ import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'r
 import { Link } from 'react-router-dom';
 
 
-function About(props) {
+function Aboutus(props) {
 
     const partners = props.partners.map(partner => {
         return (
@@ -94,4 +94,4 @@ function RenderPartner ({partner}) {
 
 
 
-export default About;
+export default Aboutus;

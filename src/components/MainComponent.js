@@ -5,7 +5,7 @@ import Header from './HeaderComponent';
 import Contact from './ContactComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
-import About from './AboutComponent';
+import Aboutus from './AboutComponent';
 import { connect } from 'react-redux';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 
@@ -48,7 +48,7 @@ class Main extends Component {
 
         const PartnersWithId = ({match}) => {
             return (
-                <About
+                <Aboutus
                     partner={this.props.partners.filter(partner => partner.id === +match.params.partnerId)[0]} />
             );
         };   
@@ -61,7 +61,7 @@ class Main extends Component {
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/directory' render={() => <Directory campsites={this.props.campsites} />} />
                     <Route path='/directory/:campsiteId' component={CampsiteWithId} />
-                    <Route exact path='/about' render={() => <About partners={this.props.partners} />} />
+                    <Route exact path='/about' render={() => <Aboutus partners={this.props.partners} />} />
                     <Route path='/about/: partnerId'component={PartnersWithId} />
                     <Route exact path='/contactus' component={Contact} />
                     <Redirect to='/home' />
