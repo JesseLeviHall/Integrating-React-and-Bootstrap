@@ -34,14 +34,14 @@ function Home(props) {
                 </div>
                 <div className="col-md m-1">
                 <RenderCard
-                        item={props.campsite}
+                        item={props.promotion}
                         isLoading={props.campsitesLoading}
                         errMess={props.campsitesErrMess}
                     />
                 </div>
                 <div className="col-md m-1">
                 <RenderCard
-                        item={props.campsite}
+                        item={props.partner}
                         isLoading={props.campsitesLoading}
                         errMess={props.campsitesErrMess}
                     />
